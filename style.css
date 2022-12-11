@@ -1,0 +1,1643 @@
+@charset "UTF-8";
+body {
+  background-color: #f5f5f5;
+  color: #4e4e4e;
+  box-sizing: border-box;
+}
+
+/*Header*/
+header {
+  transition: all 0.5s;
+  z-index: 997;
+  padding: 12px 0;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.9);
+  width: 100%;
+  position: fixed;
+  top: 0;
+}
+
+a {
+  text-decoration: none;
+  transition: all 0.5s ease-in-out;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 28px;
+  margin: 0;
+  padding: 0;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-left: 70px;
+  color: #fff;
+}
+
+.navbar {
+  padding: 0;
+  margin-right: 70px;
+}
+
+.navbar ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+.navbar > li {
+  position: relative;
+}
+
+.navbar > ul > li {
+  white-space: nowrap;
+  padding: 10px 0 10px 30px;
+}
+
+.navbar a,
+.navbar a:focus {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 0;
+  white-space: nowrap;
+  transition: 0.3s;
+  letter-spacing: 0.4px;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.navbar > ul > li > a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -6px;
+  left: 0;
+  width: 0;
+  background-color: #fff;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.navbar a:hover:before,
+.navbar li:hover > a:before,
+.navbar .active:before {
+  visibility: visible;
+  width: 80%;
+}
+
+.navbar a:hover,
+.navbar .active,
+.navbar .active:focus,
+.navbar li:hover > a {
+  color: #fff;
+}
+
+.dropbtn {
+  color: white;
+  font-size: 17px;
+  text-transform: uppercase;
+  font-weight: 400;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+}
+
+.dropdown {
+  position: relative;
+  margin-top: -2px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  margin-top: 10px;
+  flex-direction: column;
+}
+.dropdown-content .dropdown_elem {
+  padding: 10px 20px;
+  font-size: 14px;
+  text-transform: none;
+  color: #4e4e4e;
+}
+.dropdown-content .dropdown_elem:hover {
+  color: #0078ff;
+}
+
+.dropdown:hover .dropdown-content {
+  display: flex;
+}
+
+.deepdropbtn {
+  cursor: pointer;
+  border: none;
+  font-size: 14px;
+  color: #4e4e4e;
+  margin-left: -7px;
+  background: none;
+}
+
+.deepdropdown {
+  position: relative;
+}
+
+.deepdropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  margin-top: 10px;
+  flex-direction: column;
+}
+.deepdropdown-content .deepdropdown_elem {
+  padding: 10px 20px;
+  font-size: 14px;
+  text-transform: none;
+  color: #4e4e4e;
+}
+.deepdropdown-content .deepdropdown_elem:hover {
+  color: #0078ff;
+}
+
+.deepdropdown:hover .deepdropdown-content {
+  display: flex;
+}
+
+/*Hero*/
+.hero {
+  background-image: url(./images/bg1.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.opacity-hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.title-hero {
+  color: white;
+  font-size: 70px;
+  font-weight: 600;
+}
+
+.typed {
+  color: white;
+  font-size: 40px;
+  font-weight: 500;
+  margin-top: 20px;
+}
+
+/*About*/
+.about {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container-about {
+  width: 1300px;
+  height: 600px;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.06), 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: space-between;
+  margin-top: 60px;
+}
+
+.left-side-about, .right-side-about {
+  width: 580px;
+  height: 370px;
+  margin-top: 60px;
+}
+
+.left-side-about {
+  margin-left: 60px;
+}
+
+.right-side-about {
+  margin-right: 60px;
+}
+
+.upperhalf {
+  height: 150px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.about-img {
+  height: 100%;
+  border-radius: 5px;
+  background-image: url(./images/manglasses.jpg);
+  background-size: cover;
+}
+
+.portfolio-about {
+  margin-right: 20%;
+}
+
+.portfolio-about > div {
+  padding-bottom: 15px;
+}
+
+.left-side-about > h5 {
+  color: black;
+  margin-top: 30px;
+}
+
+.portfolio-about div span {
+  font-size: 18px;
+  font-weight: 550;
+  color: black;
+}
+
+.skill > span {
+  color: #4e4e4e;
+}
+
+.skill .progress {
+  background-color: #cde1f8;
+  margin: 0.5rem 0 1.2rem 0;
+  border-radius: 0;
+  height: 0.7rem;
+}
+
+.skill .progress .progress-bar {
+  height: 0.7rem;
+  background-color: #0078ff;
+}
+
+.right-side-about > h2 {
+  color: black;
+}
+
+.blue-underline-about {
+  width: 95px;
+  height: 3px;
+  background-color: #0078ff;
+}
+
+.right-side-about > p {
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: 300;
+  color: black;
+}
+
+/*Services*/
+.services {
+  width: 100%;
+  height: 115vh;
+}
+
+.services > h1 {
+  color: #000;
+  font-size: 48px;
+  font-weight: 700;
+  padding-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.services > p {
+  padding-top: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.blue-underline {
+  width: 40px;
+  height: 6px;
+  background-color: #0078ff;
+  margin: auto;
+  margin-bottom: 80px;
+}
+
+.container-services {
+  margin: auto;
+  width: 90%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 30px;
+}
+
+.services-child {
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 320px;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.06), 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+.services-child > .icon-services, .services-child > h4, .services-child > p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-services {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 10px solid #0078ff;
+  color: black;
+}
+
+.icon-services:hover {
+  border: 10px solid #a8d1ff;
+  margin: auto;
+  color: white;
+  background-color: #0078ff;
+  transition: 0.8s;
+}
+
+.icon-services:not(:hover) {
+  border: 10px solid #0078ff;
+  margin: auto;
+  color: black;
+  transition: 0.8s;
+}
+
+.services-child > h4 {
+  color: #000;
+  font-weight: 500;
+}
+
+.services-child > p {
+  width: 95%;
+  padding: 0 10px 30px 10px;
+  text-align: center;
+}
+
+/*Blue row 1*/
+.blue-row1 {
+  width: 100%;
+  height: 55vh;
+  background-image: url(./images/bg2.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.blue-opacity {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 120, 255, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.works {
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+}
+
+.icon-row {
+  width: 80px;
+  height: 80px;
+  border: 10px solid #f1f1f1;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.item-row1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.item-row1 > p {
+  font-size: larger;
+}
+.purecounter{
+  font-size: xx-large;
+}
+
+/*Portfolio*/
+.portfolio {
+  width: 100%;
+  height: 115vh;
+}
+
+.portfolio > h1 {
+  color: #000;
+  font-size: 48px;
+  font-weight: 700;
+  padding-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.portfolio > p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-portfolio {
+  margin: auto;
+  width: 90%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 30px;
+}
+
+.child-portfolio {
+  position: relative;
+  background-color: white;
+  height: 330px;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.06), 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.child-portfolio > img {
+  width: 100%;
+  overflow: hidden;
+  transition: all 1s;
+}
+
+.child-portfolio > img:hover {
+  cursor: pointer;
+  transform: scale(1.3);
+}
+
+.undertext {
+  background-color: white;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.leftside {
+  padding: 15px 0 15px 10px;
+}
+
+.leftside > h5 {
+  color: #000;
+  font-size: 19px;
+}
+
+.leftside > p > span {
+  color: #0078ff;
+  font-size: small;
+}
+
+.plus {
+  padding: 20px 10px 0 0;
+}
+
+.leftside > p {
+  font-size: smaller;
+}
+
+/*Blue row 2*/
+.blue-row2 {
+  width: 100%;
+  height: 70vh;
+  background-image: url(./images/bg3.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.blue-row2 > .blue-opacity {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 120, 255, 0.5);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.slider_element {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: #f1f1f1;
+  justify-content: center;
+}
+
+.slider_element > img {
+  border-radius: 50%;
+}
+
+.dots {
+  padding: 30px;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  display: inline-block;
+  transition-duration: 0.5s;
+}
+
+.dot:hover {
+  background-color: #949494;
+}
+
+/*Blog*/
+.blog {
+  width: 100%;
+  height: 100vh;
+}
+
+.blog > h1 {
+  color: #000;
+  font-size: 48px;
+  font-weight: 700;
+  padding-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.blog > p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-blog {
+  margin: auto;
+  width: 90%;
+  height: 60vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 30px;
+}
+
+.child-blog {
+  border-radius: 8px;
+  background-color: white;
+  border: 1px solid rgb(196, 192, 192);
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.06), 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.child-blog > img {
+  height: 60%;
+  width: 100%;
+}
+
+.child-blog > h5 {
+  color: #000;
+  font-size: 22px;
+  padding: 20px 0 0 15px;
+}
+
+.child-blog > p {
+  padding-left: 15px;
+}
+
+.undertext-blog {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #f5f5f5;
+  height: 10%;
+  border-top: 1px solid rgb(196, 192, 192);
+  border-radius: 0 0 8px 8px;
+  display: flex;
+  align-items: center;
+}
+
+.morgan-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-image: url(./images/manglasses.jpg);
+  background-size: cover;
+  margin-left: 15px;
+}
+
+.undertext-blog > h6 {
+  color: #000;
+  font-weight: 400;
+  padding-left: 10px;
+}
+
+.undertext-blog > h6:hover {
+  color: #0078ff;
+}
+
+.undertext-blog > svg {
+  margin-left: 150px;
+  display: flex;
+  align-items: center;
+}
+
+.undertext-blog > p {
+  margin-top: 15px;
+  padding-left: 5px;
+}
+
+/*Contact*/
+.contact {
+  width: 100%;
+  height: 90vh;
+  background-image: url(./images/bg3.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.opacity-contact {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 120, 255, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-contact {
+  width: 90%;
+  height: 75%;
+  background-color: rgb(254, 255, 255);
+  display: flex;
+}
+
+.leftbox, .rightbox {
+  width: 50%;
+}
+
+.leftbox > h2, .rightbox > h2 {
+  color: black;
+  padding-top: 50px;
+}
+
+.leftbox > h2, .leftbox > .blue-underline-about {
+  margin-left: 40px;
+}
+
+.blue-underline-about {
+  margin-bottom: 30px;
+}
+
+input {
+  width: 90%;
+  margin-left: 40px;
+  border: 1px solid rgb(188, 188, 188);
+  margin-bottom: 15px;
+  height: 42px;
+  font-size: smaller;
+  color: black;
+  padding-left: 15px;
+}
+
+.biggerinput {
+  height: 130px;
+}
+
+.leftbox > button {
+  background-color: #0078ff;
+  border-radius: 30px;
+  height: 50px;
+  width: 170px;
+  color: white;
+  border: 2px #0078ff;
+  font-size: larger;
+  margin-left: 35%;
+}
+
+.leftbox > button:hover {
+  box-shadow: 0px 0px 0px 5px rgb(168, 209, 255);
+  background-color: #2a8cfc;
+  transition: 0.6s;
+}
+
+.leftbox > button:not(:hover) {
+  background-color: #0078ff;
+  border: 2px #0078ff;
+  transition: 0.6s;
+}
+
+.container-socials {
+  display: flex;
+}
+
+.socials {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: 3px solid #0078ff;
+  color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.socials:hover {
+  border: 3px solid #a8d1ff;
+  background-color: #0078ff;
+  color: white;
+  cursor: pointer;
+  transition: 0.6s;
+}
+
+.socials:not(:hover) {
+  border: 3px solid #0078ff;
+  transition: 0.6s;
+}
+
+.rightbox > p {
+  width: 85%;
+  font-size: 20px;
+  font-weight: 250;
+}
+
+.data-contact {
+  margin-bottom: 10px;
+}
+
+.typed {
+  color: white;
+  font-family: "Roboto";
+  font-size: 40px;
+  margin-top: 20px;
+}
+.typed::before {
+  content: "​";
+  content: "​"/"Designer";
+  alt: "Designer";
+  white-space: break-spaces;
+  will-change: content;
+  -webkit-animation: typed-0 19.02s linear 1s infinite forwards;
+          animation: typed-0 19.02s linear 1s infinite forwards;
+}
+.typed::after {
+  content: "​";
+  position: relative;
+  display: inline-block;
+  padding-right: 0.1ch;
+  border-right: 1ch solid currentColor;
+  white-space: nowrap;
+  -webkit-animation: typed-0-caret 0.75s linear 1s infinite forwards;
+          animation: typed-0-caret 0.75s linear 1s infinite forwards;
+}
+@-webkit-keyframes typed-0 {
+  0%, 0.5247623554% {
+    content: "​D";
+    content: "​D"/"Designer";
+    alt: "Designer";
+  }
+  0.5257623554%, 1.0505247108% {
+    content: "​De";
+    content: "​De"/"Designer";
+    alt: "Designer";
+  }
+  1.0515247108%, 1.5762870662% {
+    content: "​Des";
+    content: "​Des"/"Designer";
+    alt: "Designer";
+  }
+  1.5772870662%, 2.1020494217% {
+    content: "​Desi";
+    content: "​Desi"/"Designer";
+    alt: "Designer";
+  }
+  2.1030494217%, 2.6278117771% {
+    content: "​Desig";
+    content: "​Desig"/"Designer";
+    alt: "Designer";
+  }
+  2.6288117771%, 3.1535741325% {
+    content: "​Design";
+    content: "​Design"/"Designer";
+    alt: "Designer";
+  }
+  3.1545741325%, 3.6793364879% {
+    content: "​Designe";
+    content: "​Designe"/"Designer";
+    alt: "Designer";
+  }
+  3.6803364879%, 15.140955836% {
+    content: "​Designer";
+    content: "​Designer"/"Designer";
+    alt: "Designer";
+  }
+  15.141955836%, 15.5615657203% {
+    content: "​Designe";
+    content: "​Designe"/"Designer";
+    alt: "Designer";
+  }
+  15.5625657203%, 15.9821756046% {
+    content: "​Design";
+    content: "​Design"/"Designer";
+    alt: "Designer";
+  }
+  15.9831756046%, 16.402785489% {
+    content: "​Desig";
+    content: "​Desig"/"Designer";
+    alt: "Designer";
+  }
+  16.403785489%, 16.8233953733% {
+    content: "​Desi";
+    content: "​Desi"/"Designer";
+    alt: "Designer";
+  }
+  16.8243953733%, 17.2440052576% {
+    content: "​Des";
+    content: "​Des"/"Designer";
+    alt: "Designer";
+  }
+  17.2450052576%, 17.664615142% {
+    content: "​De";
+    content: "​De"/"Designer";
+    alt: "Designer";
+  }
+  17.665615142%, 18.0852250263% {
+    content: "​D";
+    content: "​D"/"Designer";
+    alt: "Designer";
+  }
+  18.0862250263%, 23.3428485804% {
+    content: "​";
+    content: "​"/"Designer";
+    alt: "Designer";
+  }
+  23.3438485804%, 23.8686109359% {
+    content: "​D";
+    content: "​D"/"Designer";
+    alt: "Designer";
+  }
+  23.8696109359%, 24.3943732913% {
+    content: "​De";
+    content: "​De"/"Designer";
+    alt: "Designer";
+  }
+  24.3953732913%, 24.9201356467% {
+    content: "​Dev";
+    content: "​Dev"/"Designer";
+    alt: "Designer";
+  }
+  24.9211356467%, 25.4458980021% {
+    content: "​Deve";
+    content: "​Deve"/"Designer";
+    alt: "Designer";
+  }
+  25.4468980021%, 25.9716603575% {
+    content: "​Devel";
+    content: "​Devel"/"Designer";
+    alt: "Designer";
+  }
+  25.9726603575%, 26.4974227129% {
+    content: "​Develo";
+    content: "​Develo"/"Designer";
+    alt: "Designer";
+  }
+  26.4984227129%, 27.0231850683% {
+    content: "​Develop";
+    content: "​Develop"/"Designer";
+    alt: "Designer";
+  }
+  27.0241850683%, 27.5489474238% {
+    content: "​Develope";
+    content: "​Develope"/"Designer";
+    alt: "Designer";
+  }
+  27.5499474238%, 39.0105667718% {
+    content: "​Developer";
+    content: "​Developer"/"Designer";
+    alt: "Designer";
+  }
+  39.0115667718%, 39.4311766562% {
+    content: "​Develope";
+    content: "​Develope"/"Designer";
+    alt: "Designer";
+  }
+  39.4321766562%, 39.8517865405% {
+    content: "​Develop";
+    content: "​Develop"/"Designer";
+    alt: "Designer";
+  }
+  39.8527865405%, 40.2723964248% {
+    content: "​Develo";
+    content: "​Develo"/"Designer";
+    alt: "Designer";
+  }
+  40.2733964248%, 40.6930063091% {
+    content: "​Devel";
+    content: "​Devel"/"Designer";
+    alt: "Designer";
+  }
+  40.6940063091%, 41.1136161935% {
+    content: "​Deve";
+    content: "​Deve"/"Designer";
+    alt: "Designer";
+  }
+  41.1146161935%, 41.5342260778% {
+    content: "​Dev";
+    content: "​Dev"/"Designer";
+    alt: "Designer";
+  }
+  41.5352260778%, 41.9548359621% {
+    content: "​De";
+    content: "​De"/"Designer";
+    alt: "Designer";
+  }
+  41.9558359621%, 42.3754458465% {
+    content: "​D";
+    content: "​D"/"Designer";
+    alt: "Designer";
+  }
+  42.3764458465%, 47.6330694006% {
+    content: "​";
+    content: "​"/"Designer";
+    alt: "Designer";
+  }
+  47.6340694006%, 48.158831756% {
+    content: "​F";
+    content: "​F"/"Designer";
+    alt: "Designer";
+  }
+  48.159831756%, 48.6845941115% {
+    content: "​Fr";
+    content: "​Fr"/"Designer";
+    alt: "Designer";
+  }
+  48.6855941115%, 49.2103564669% {
+    content: "​Fre";
+    content: "​Fre"/"Designer";
+    alt: "Designer";
+  }
+  49.2113564669%, 49.7361188223% {
+    content: "​Free";
+    content: "​Free"/"Designer";
+    alt: "Designer";
+  }
+  49.7371188223%, 50.2618811777% {
+    content: "​Freel";
+    content: "​Freel"/"Designer";
+    alt: "Designer";
+  }
+  50.2628811777%, 50.7876435331% {
+    content: "​Freela";
+    content: "​Freela"/"Designer";
+    alt: "Designer";
+  }
+  50.7886435331%, 51.3134058885% {
+    content: "​Freelan";
+    content: "​Freelan"/"Designer";
+    alt: "Designer";
+  }
+  51.3144058885%, 51.839168244% {
+    content: "​Freelanc";
+    content: "​Freelanc"/"Designer";
+    alt: "Designer";
+  }
+  51.840168244%, 52.3649305994% {
+    content: "​Freelance";
+    content: "​Freelance"/"Designer";
+    alt: "Designer";
+  }
+  52.3659305994%, 63.8265499474% {
+    content: "​Freelancer";
+    content: "​Freelancer"/"Designer";
+    alt: "Designer";
+  }
+  63.8275499474%, 64.2471598318% {
+    content: "​Freelance";
+    content: "​Freelance"/"Designer";
+    alt: "Designer";
+  }
+  64.2481598318%, 64.6677697161% {
+    content: "​Freelanc";
+    content: "​Freelanc"/"Designer";
+    alt: "Designer";
+  }
+  64.6687697161%, 65.0883796004% {
+    content: "​Freelan";
+    content: "​Freelan"/"Designer";
+    alt: "Designer";
+  }
+  65.0893796004%, 65.5089894848% {
+    content: "​Freela";
+    content: "​Freela"/"Designer";
+    alt: "Designer";
+  }
+  65.5099894848%, 65.9295993691% {
+    content: "​Freel";
+    content: "​Freel"/"Designer";
+    alt: "Designer";
+  }
+  65.9305993691%, 66.3502092534% {
+    content: "​Free";
+    content: "​Free"/"Designer";
+    alt: "Designer";
+  }
+  66.3512092534%, 66.7708191377% {
+    content: "​Fre";
+    content: "​Fre"/"Designer";
+    alt: "Designer";
+  }
+  66.7718191377%, 67.1914290221% {
+    content: "​Fr";
+    content: "​Fr"/"Designer";
+    alt: "Designer";
+  }
+  67.1924290221%, 67.6120389064% {
+    content: "​F";
+    content: "​F"/"Designer";
+    alt: "Designer";
+  }
+  67.6130389064%, 72.8696624606% {
+    content: "​";
+    content: "​"/"Designer";
+    alt: "Designer";
+  }
+  72.8706624606%, 73.395424816% {
+    content: "​P";
+    content: "​P"/"Designer";
+    alt: "Designer";
+  }
+  73.396424816%, 73.9211871714% {
+    content: "​Ph";
+    content: "​Ph"/"Designer";
+    alt: "Designer";
+  }
+  73.9221871714%, 74.4469495268% {
+    content: "​Pho";
+    content: "​Pho"/"Designer";
+    alt: "Designer";
+  }
+  74.4479495268%, 74.9727118822% {
+    content: "​Phot";
+    content: "​Phot"/"Designer";
+    alt: "Designer";
+  }
+  74.9737118822%, 75.4984742376% {
+    content: "​Photo";
+    content: "​Photo"/"Designer";
+    alt: "Designer";
+  }
+  75.4994742376%, 76.0242365931% {
+    content: "​Photog";
+    content: "​Photog"/"Designer";
+    alt: "Designer";
+  }
+  76.0252365931%, 76.5499989485% {
+    content: "​Photogr";
+    content: "​Photogr"/"Designer";
+    alt: "Designer";
+  }
+  76.5509989485%, 77.0757613039% {
+    content: "​Photogra";
+    content: "​Photogra"/"Designer";
+    alt: "Designer";
+  }
+  77.0767613039%, 77.6015236593% {
+    content: "​Photograp";
+    content: "​Photograp"/"Designer";
+    alt: "Designer";
+  }
+  77.6025236593%, 78.1272860147% {
+    content: "​Photograph";
+    content: "​Photograph"/"Designer";
+    alt: "Designer";
+  }
+  78.1282860147%, 78.6530483701% {
+    content: "​Photographe";
+    content: "​Photographe"/"Designer";
+    alt: "Designer";
+  }
+  78.6540483701%, 90.1146677182% {
+    content: "​Photographer";
+    content: "​Photographer"/"Designer";
+    alt: "Designer";
+  }
+  90.1156677182%, 90.5352776025% {
+    content: "​Photographe";
+    content: "​Photographe"/"Designer";
+    alt: "Designer";
+  }
+  90.5362776025%, 90.9558874869% {
+    content: "​Photograph";
+    content: "​Photograph"/"Designer";
+    alt: "Designer";
+  }
+  90.9568874869%, 91.3764973712% {
+    content: "​Photograp";
+    content: "​Photograp"/"Designer";
+    alt: "Designer";
+  }
+  91.3774973712%, 91.7971072555% {
+    content: "​Photogra";
+    content: "​Photogra"/"Designer";
+    alt: "Designer";
+  }
+  91.7981072555%, 92.2177171399% {
+    content: "​Photogr";
+    content: "​Photogr"/"Designer";
+    alt: "Designer";
+  }
+  92.2187171399%, 92.6383270242% {
+    content: "​Photog";
+    content: "​Photog"/"Designer";
+    alt: "Designer";
+  }
+  92.6393270242%, 93.0589369085% {
+    content: "​Photo";
+    content: "​Photo"/"Designer";
+    alt: "Designer";
+  }
+  93.0599369085%, 93.4795467928% {
+    content: "​Phot";
+    content: "​Phot"/"Designer";
+    alt: "Designer";
+  }
+  93.4805467928%, 93.9001566772% {
+    content: "​Pho";
+    content: "​Pho"/"Designer";
+    alt: "Designer";
+  }
+  93.9011566772%, 94.3207665615% {
+    content: "​Ph";
+    content: "​Ph"/"Designer";
+    alt: "Designer";
+  }
+  94.3217665615%, 94.7413764458% {
+    content: "​P";
+    content: "​P"/"Designer";
+    alt: "Designer";
+  }
+  94.7423764458%, 100% {
+    content: "​";
+    content: "​"/"Designer";
+    alt: "Designer";
+  }
+}
+@keyframes typed-0 {
+  0%, 0.5247623554% {
+    content: "​D";
+    content: "​D"/"Designer";
+    alt: "Designer";
+  }
+  0.5257623554%, 1.0505247108% {
+    content: "​De";
+    content: "​De"/"Designer";
+    alt: "Designer";
+  }
+  1.0515247108%, 1.5762870662% {
+    content: "​Des";
+    content: "​Des"/"Designer";
+    alt: "Designer";
+  }
+  1.5772870662%, 2.1020494217% {
+    content: "​Desi";
+    content: "​Desi"/"Designer";
+    alt: "Designer";
+  }
+  2.1030494217%, 2.6278117771% {
+    content: "​Desig";
+    content: "​Desig"/"Designer";
+    alt: "Designer";
+  }
+  2.6288117771%, 3.1535741325% {
+    content: "​Design";
+    content: "​Design"/"Designer";
+    alt: "Designer";
+  }
+  3.1545741325%, 3.6793364879% {
+    content: "​Designe";
+    content: "​Designe"/"Designer";
+    alt: "Designer";
+  }
+  3.6803364879%, 15.140955836% {
+    content: "​Designer";
+    content: "​Designer"/"Designer";
+    alt: "Designer";
+  }
+  15.141955836%, 15.5615657203% {
+    content: "​Designe";
+    content: "​Designe"/"Designer";
+    alt: "Designer";
+  }
+  15.5625657203%, 15.9821756046% {
+    content: "​Design";
+    content: "​Design"/"Designer";
+    alt: "Designer";
+  }
+  15.9831756046%, 16.402785489% {
+    content: "​Desig";
+    content: "​Desig"/"Designer";
+    alt: "Designer";
+  }
+  16.403785489%, 16.8233953733% {
+    content: "​Desi";
+    content: "​Desi"/"Designer";
+    alt: "Designer";
+  }
+  16.8243953733%, 17.2440052576% {
+    content: "​Des";
+    content: "​Des"/"Designer";
+    alt: "Designer";
+  }
+  17.2450052576%, 17.664615142% {
+    content: "​De";
+    content: "​De"/"Designer";
+    alt: "Designer";
+  }
+  17.665615142%, 18.0852250263% {
+    content: "​D";
+    content: "​D"/"Designer";
+    alt: "Designer";
+  }
+  18.0862250263%, 23.3428485804% {
+    content: "​";
+    content: "​"/"Designer";
+    alt: "Designer";
+  }
+  23.3438485804%, 23.8686109359% {
+    content: "​D";
+    content: "​D"/"Designer";
+    alt: "Designer";
+  }
+  23.8696109359%, 24.3943732913% {
+    content: "​De";
+    content: "​De"/"Designer";
+    alt: "Designer";
+  }
+  24.3953732913%, 24.9201356467% {
+    content: "​Dev";
+    content: "​Dev"/"Designer";
+    alt: "Designer";
+  }
+  24.9211356467%, 25.4458980021% {
+    content: "​Deve";
+    content: "​Deve"/"Designer";
+    alt: "Designer";
+  }
+  25.4468980021%, 25.9716603575% {
+    content: "​Devel";
+    content: "​Devel"/"Designer";
+    alt: "Designer";
+  }
+  25.9726603575%, 26.4974227129% {
+    content: "​Develo";
+    content: "​Develo"/"Designer";
+    alt: "Designer";
+  }
+  26.4984227129%, 27.0231850683% {
+    content: "​Develop";
+    content: "​Develop"/"Designer";
+    alt: "Designer";
+  }
+  27.0241850683%, 27.5489474238% {
+    content: "​Develope";
+    content: "​Develope"/"Designer";
+    alt: "Designer";
+  }
+  27.5499474238%, 39.0105667718% {
+    content: "​Developer";
+    content: "​Developer"/"Designer";
+    alt: "Designer";
+  }
+  39.0115667718%, 39.4311766562% {
+    content: "​Develope";
+    content: "​Develope"/"Designer";
+    alt: "Designer";
+  }
+  39.4321766562%, 39.8517865405% {
+    content: "​Develop";
+    content: "​Develop"/"Designer";
+    alt: "Designer";
+  }
+  39.8527865405%, 40.2723964248% {
+    content: "​Develo";
+    content: "​Develo"/"Designer";
+    alt: "Designer";
+  }
+  40.2733964248%, 40.6930063091% {
+    content: "​Devel";
+    content: "​Devel"/"Designer";
+    alt: "Designer";
+  }
+  40.6940063091%, 41.1136161935% {
+    content: "​Deve";
+    content: "​Deve"/"Designer";
+    alt: "Designer";
+  }
+  41.1146161935%, 41.5342260778% {
+    content: "​Dev";
+    content: "​Dev"/"Designer";
+    alt: "Designer";
+  }
+  41.5352260778%, 41.9548359621% {
+    content: "​De";
+    content: "​De"/"Designer";
+    alt: "Designer";
+  }
+  41.9558359621%, 42.3754458465% {
+    content: "​D";
+    content: "​D"/"Designer";
+    alt: "Designer";
+  }
+  42.3764458465%, 47.6330694006% {
+    content: "​";
+    content: "​"/"Designer";
+    alt: "Designer";
+  }
+  47.6340694006%, 48.158831756% {
+    content: "​F";
+    content: "​F"/"Designer";
+    alt: "Designer";
+  }
+  48.159831756%, 48.6845941115% {
+    content: "​Fr";
+    content: "​Fr"/"Designer";
+    alt: "Designer";
+  }
+  48.6855941115%, 49.2103564669% {
+    content: "​Fre";
+    content: "​Fre"/"Designer";
+    alt: "Designer";
+  }
+  49.2113564669%, 49.7361188223% {
+    content: "​Free";
+    content: "​Free"/"Designer";
+    alt: "Designer";
+  }
+  49.7371188223%, 50.2618811777% {
+    content: "​Freel";
+    content: "​Freel"/"Designer";
+    alt: "Designer";
+  }
+  50.2628811777%, 50.7876435331% {
+    content: "​Freela";
+    content: "​Freela"/"Designer";
+    alt: "Designer";
+  }
+  50.7886435331%, 51.3134058885% {
+    content: "​Freelan";
+    content: "​Freelan"/"Designer";
+    alt: "Designer";
+  }
+  51.3144058885%, 51.839168244% {
+    content: "​Freelanc";
+    content: "​Freelanc"/"Designer";
+    alt: "Designer";
+  }
+  51.840168244%, 52.3649305994% {
+    content: "​Freelance";
+    content: "​Freelance"/"Designer";
+    alt: "Designer";
+  }
+  52.3659305994%, 63.8265499474% {
+    content: "​Freelancer";
+    content: "​Freelancer"/"Designer";
+    alt: "Designer";
+  }
+  63.8275499474%, 64.2471598318% {
+    content: "​Freelance";
+    content: "​Freelance"/"Designer";
+    alt: "Designer";
+  }
+  64.2481598318%, 64.6677697161% {
+    content: "​Freelanc";
+    content: "​Freelanc"/"Designer";
+    alt: "Designer";
+  }
+  64.6687697161%, 65.0883796004% {
+    content: "​Freelan";
+    content: "​Freelan"/"Designer";
+    alt: "Designer";
+  }
+  65.0893796004%, 65.5089894848% {
+    content: "​Freela";
+    content: "​Freela"/"Designer";
+    alt: "Designer";
+  }
+  65.5099894848%, 65.9295993691% {
+    content: "​Freel";
+    content: "​Freel"/"Designer";
+    alt: "Designer";
+  }
+  65.9305993691%, 66.3502092534% {
+    content: "​Free";
+    content: "​Free"/"Designer";
+    alt: "Designer";
+  }
+  66.3512092534%, 66.7708191377% {
+    content: "​Fre";
+    content: "​Fre"/"Designer";
+    alt: "Designer";
+  }
+  66.7718191377%, 67.1914290221% {
+    content: "​Fr";
+    content: "​Fr"/"Designer";
+    alt: "Designer";
+  }
+  67.1924290221%, 67.6120389064% {
+    content: "​F";
+    content: "​F"/"Designer";
+    alt: "Designer";
+  }
+  67.6130389064%, 72.8696624606% {
+    content: "​";
+    content: "​"/"Designer";
+    alt: "Designer";
+  }
+  72.8706624606%, 73.395424816% {
+    content: "​P";
+    content: "​P"/"Designer";
+    alt: "Designer";
+  }
+  73.396424816%, 73.9211871714% {
+    content: "​Ph";
+    content: "​Ph"/"Designer";
+    alt: "Designer";
+  }
+  73.9221871714%, 74.4469495268% {
+    content: "​Pho";
+    content: "​Pho"/"Designer";
+    alt: "Designer";
+  }
+  74.4479495268%, 74.9727118822% {
+    content: "​Phot";
+    content: "​Phot"/"Designer";
+    alt: "Designer";
+  }
+  74.9737118822%, 75.4984742376% {
+    content: "​Photo";
+    content: "​Photo"/"Designer";
+    alt: "Designer";
+  }
+  75.4994742376%, 76.0242365931% {
+    content: "​Photog";
+    content: "​Photog"/"Designer";
+    alt: "Designer";
+  }
+  76.0252365931%, 76.5499989485% {
+    content: "​Photogr";
+    content: "​Photogr"/"Designer";
+    alt: "Designer";
+  }
+  76.5509989485%, 77.0757613039% {
+    content: "​Photogra";
+    content: "​Photogra"/"Designer";
+    alt: "Designer";
+  }
+  77.0767613039%, 77.6015236593% {
+    content: "​Photograp";
+    content: "​Photograp"/"Designer";
+    alt: "Designer";
+  }
+  77.6025236593%, 78.1272860147% {
+    content: "​Photograph";
+    content: "​Photograph"/"Designer";
+    alt: "Designer";
+  }
+  78.1282860147%, 78.6530483701% {
+    content: "​Photographe";
+    content: "​Photographe"/"Designer";
+    alt: "Designer";
+  }
+  78.6540483701%, 90.1146677182% {
+    content: "​Photographer";
+    content: "​Photographer"/"Designer";
+    alt: "Designer";
+  }
+  90.1156677182%, 90.5352776025% {
+    content: "​Photographe";
+    content: "​Photographe"/"Designer";
+    alt: "Designer";
+  }
+  90.5362776025%, 90.9558874869% {
+    content: "​Photograph";
+    content: "​Photograph"/"Designer";
+    alt: "Designer";
+  }
+  90.9568874869%, 91.3764973712% {
+    content: "​Photograp";
+    content: "​Photograp"/"Designer";
+    alt: "Designer";
+  }
+  91.3774973712%, 91.7971072555% {
+    content: "​Photogra";
+    content: "​Photogra"/"Designer";
+    alt: "Designer";
+  }
+  91.7981072555%, 92.2177171399% {
+    content: "​Photogr";
+    content: "​Photogr"/"Designer";
+    alt: "Designer";
+  }
+  92.2187171399%, 92.6383270242% {
+    content: "​Photog";
+    content: "​Photog"/"Designer";
+    alt: "Designer";
+  }
+  92.6393270242%, 93.0589369085% {
+    content: "​Photo";
+    content: "​Photo"/"Designer";
+    alt: "Designer";
+  }
+  93.0599369085%, 93.4795467928% {
+    content: "​Phot";
+    content: "​Phot"/"Designer";
+    alt: "Designer";
+  }
+  93.4805467928%, 93.9001566772% {
+    content: "​Pho";
+    content: "​Pho"/"Designer";
+    alt: "Designer";
+  }
+  93.9011566772%, 94.3207665615% {
+    content: "​Ph";
+    content: "​Ph"/"Designer";
+    alt: "Designer";
+  }
+  94.3217665615%, 94.7413764458% {
+    content: "​P";
+    content: "​P"/"Designer";
+    alt: "Designer";
+  }
+  94.7423764458%, 100% {
+    content: "​";
+    content: "​"/"Designer";
+    alt: "Designer";
+  }
+}
+@-webkit-keyframes typed-0-caret {
+  75% {
+    border-color: transparent;
+  }
+}
+@keyframes typed-0-caret {
+  75% {
+    border-color: transparent;
+  }
+}
+
+#scroll-btn {
+  opacity: 0;
+  width: 40px;
+  height: 40px;
+  color: #fff;
+  background-color: #0078ff;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  border: none;
+  border-radius: 50%;
+  font: bold 20px monospace;
+  transition: opacity 0.5s, transform 0.5s;
+  cursor: pointer;
+}
+
+#scroll-btn.show {
+  opacity: 1;
+  transition: opacity 1s, transform 1s;
+}/*# sourceMappingURL=style.css.map */
